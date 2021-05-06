@@ -15,10 +15,10 @@ steps:
 # This step deploys your image in kubernetes cluster specfied in below env
  - name: 'gcr.io/cloud-builders/docker'
    id: Deploy
-   args:
-    -  'apply' 
-    -  '-f' 
-    -  'deploy.yaml',
-    env:
+  args:
+  - 'apply'
+  - '-f'
+  - 'deploy.yaml'
+  env:
     - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
     - 'CLOUDSDK_CONTAINER_CLUSTER=gcpcluster'
