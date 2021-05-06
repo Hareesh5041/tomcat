@@ -4,16 +4,20 @@ metadata:
   name: tomcat
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: tomcat
   template:
     metadata:
       labels:
         app: tomcat
     spec:
       containers:
-        - name: tomcat
-          image: gcr.io/resounding-rune-310809/tomcat
-          ports:
-            - containerPort: 8080
+      - name: tomcat
+        image: gcr.io/resounding-rune-310809/tomcat
+        imagePullPolicy: IfNotPresent        
+        ports:
+        - containerPort: 8080
 
 ---
 apiVersion: v1
