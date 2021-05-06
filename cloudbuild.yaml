@@ -20,8 +20,6 @@ steps:
     - '-f'
     - 'deploy.yaml'
     
-    - 'apply'
-    - '-f'
     - 'service.yaml'
    env:
     - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
