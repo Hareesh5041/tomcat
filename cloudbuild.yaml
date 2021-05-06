@@ -19,6 +19,10 @@ steps:
     - 'apply'
     - '-f'
     - 'deploy.yaml'
+    
+    - 'apply'
+    - '-f'
+    - 'service.yaml'
    env:
     - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
     - 'CLOUDSDK_CONTAINER_CLUSTER=gcpcluster'
