@@ -13,7 +13,7 @@ steps:
  - name: 'gcr.io/cloud-builders/docker'
    args: ["push", "gcr.io/$PROJECT_ID/tomcat"]
 # This step deploys your image in kubernetes cluster specfied in below env
- - name: 'gcr.io/cloud-builders/docker'
+ - name: 'gcr.io/cloud-builders/kubectl'
    id: Deploy
    args:
    - 'apply'
