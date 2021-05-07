@@ -16,7 +16,7 @@ steps:
    id: push image to container registry
    args: ["push", "gcr.io/$PROJECT_ID/tomcat"]
 # Create a new cluster with the appropriate configuration for this application
- - name: 'gcr.io/cloud-builders/gcloud'
+ - name: 'gcr.io/cloud-builders/docker'
    id: Create Cluster
    waitFor: ['-']
    args: [
