@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: hello-web-disk
+  name: tomcat
 spec:
   accessModes:
     - ReadWriteOnce
