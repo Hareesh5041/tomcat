@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: tomcat
+  name: tomcat-volume-disk
 spec:
   accessModes:
     - ReadWriteOnce
