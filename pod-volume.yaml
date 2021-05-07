@@ -1,15 +1,15 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: pvc-demo-pod
+  name: tomcat-vol-pod
 spec:
   containers:
     - name: frontend
-      image: nginx
+      image: gcr.io/resounding-rune-310809/tomcat
       volumeMounts:
-      - mountPath: "/var/www/html"
-        name: pvc-demo-volume
+      - mountPath: "/vol/test"
+        name: tomcat-vol-pod
   volumes:
-    - name: pvc-demo-volume
+    - name: tomcat-vol-pod
       persistentVolumeClaim:
-        claimName: hello-web-disk
+        claimName: tomcat-volume-disk
