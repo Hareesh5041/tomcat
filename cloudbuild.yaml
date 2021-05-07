@@ -62,12 +62,12 @@ steps:
    - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-c'
    - 'CLOUDSDK_CONTAINER_CLUSTER=gcpcluster'  
  # This steps your image in kubernetes cluster specfied in below env
-  - name: 'gcr.io/cloud-builders/kubectl'
-    id: volume
-    args:
-    - 'apply'
-    - '-f'
-    - 'pod-volume.yaml'
-    env:
-    - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-c'
-    - 'CLOUDSDK_CONTAINER_CLUSTER=gcpcluster'  
+   - name: 'gcr.io/cloud-builders/kubectl'
+     id: volume
+     args:
+     - 'apply'
+     - '-f'
+     - 'pod-volume.yaml'
+     env:
+     - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-c'
+     - 'CLOUDSDK_CONTAINER_CLUSTER=gcpcluster'  
