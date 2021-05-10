@@ -21,13 +21,9 @@ steps:
    waitFor: ['-']
    args: [
      'container', 'clusters', 'create', 'gcpcluster',
-     '--addons', 'HorizontalPodAutoscaling,HttpLoadBalancing,CloudRun',
      '--machine-type', 'e2-micro',
-     '--num-nodes', '2',
+     '--num-nodes', '3',
      '--cluster-version', '${_CLUSTER_GKE_VERSION}',
-     '--enable-stackdriver-kubernetes',
-     '--workload-pool', '${PROJECT_ID}.svc.id.goog',
-     '--enable-ip-alias',
      '--zone', 'asia-east1-c'
    ] 
    
