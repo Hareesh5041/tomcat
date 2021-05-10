@@ -46,15 +46,15 @@ steps:
    id: service expose
    waitFor: ['-']
    args: [
-   - expose
-   - deployment
-   - tomcat
-   - "--type"
-   - LoadBalancer
-   - "--port"
-   - 8080
-   - "--target-port"
-   - 8080  
+   - 'expose'
+   - 'deployment'
+   - 'tomcat'
+   - '--type'
+   - 'LoadBalancer'
+   - '--port'
+   - '8080'
+   - '--target-port'
+   - '8080'  
   ]
    env:
    - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-c'
