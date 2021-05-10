@@ -45,8 +45,15 @@ steps:
  - name: 'gcr.io/cloud-builders/kubectl'
    id: service expose
    args:
-     'expose', 'deployment', 'tomcat','container', '--type', 'LoadBalancer',
-     '--port', '8080', '--target-port','8080'
+   - expose
+   - deployment
+   - tomcat
+   - "--type"
+   - LoadBalancer
+   - "--port"
+   - 8080
+   - "--target-port"
+   - 8080  
    
    env:
    - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-c'
