@@ -44,6 +44,7 @@ steps:
 # This steps service your image in kubernetes cluster specfied in below env
  - name: 'gcr.io/cloud-builders/kubectl'
    id: service expose
+   waitFor: ['-']
    args: [
    - expose
    - deployment
