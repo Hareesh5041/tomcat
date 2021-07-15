@@ -3,7 +3,7 @@
 FROM centos:7
 MAINTAINER Hareesh Thummala, hareesh5041@gmail.com
 
-# java git maven
+# java git maven installation
 RUN yum install -y java-1.8.0-openjdk-devel wget git maven
 
 # Create users and groups
