@@ -32,4 +32,3 @@ RUN chmod 777 /opt/tomcat/webapps/ROOT.war
 VOLUME /opt/tomcat/webapps
 EXPOSE 8080
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
-#
